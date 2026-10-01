@@ -1,0 +1,785 @@
+/* =====================================================
+   RESET
+===================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,
+body{
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    background:#000;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+/* =====================================================
+   HERO
+===================================================== */
+
+/* Botão pra trocar de cena */
+
+.change-scene{
+
+    position: absolute;
+    right: 100px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #000;
+    background: rgba(255, 255, 255, 0.352);
+    border-radius: 40px;
+    z-index: 999;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+}
+:hover .change-scene{
+
+    cursor: pointer;
+    
+
+}
+
+.hero{
+
+    position:relative;
+
+    width:100vw;
+    height:100vh;
+
+    overflow:hidden;
+
+    background:#000;
+
+}
+
+/* =====================================================
+   INTRO VIDEO
+===================================================== */
+
+.intro-video{
+
+    position:absolute;
+
+    inset:0;
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    z-index:100;
+
+}
+
+/* =====================================================
+   BACKGROUND
+===================================================== */
+
+.backgroundTresTResTRes{
+    position:absolute;
+    inset:0;
+    background-image:url("IMGS/333/333\ fundo.jpg");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    z-index:1;
+}
+
+.background{
+    position:absolute;
+    inset:0;
+
+    background-image:url("IMGS/melhoria\ do\ ultimo\ frame\ 2.png ");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    z-index:1;
+}
+
+/* =====================================================
+   CENA
+===================================================== */
+
+.cena{
+
+    position:absolute;
+    left:50%;
+    bottom:-40px;
+    transform:translateX(-50%);
+    width:620px;
+    z-index:20;
+
+}
+
+.cena{
+
+    position:absolute;
+    left:50%;
+    bottom:-40px;
+    transform:translateX(-50%);
+    width:620px;
+    z-index:20;
+
+}
+
+
+/* =====================================================
+   UI
+===================================================== */
+
+.ui{
+
+    position:absolute;
+
+    inset:0;
+
+    z-index:40;
+
+    pointer-events:none;
+
+}
+
+/* =====================================================
+   RESPONSIVO
+===================================================== */
+
+@media(max-width:900px){
+
+    .cena{
+
+        width:420px;
+
+    }
+
+    .logo{
+
+        width:280px;
+
+    }
+
+}
+
+/* ===========================
+   INTRO
+=========================== */
+
+.hidden{
+
+    opacity:0;
+
+}
+
+.intro-video{
+
+    pointer-events:none;
+
+}
+
+/* ===========================
+   LOGO
+=========================== */
+
+.logo{
+
+    position:absolute;
+    left:50%;
+    bottom:200px; /* ajuste esse valor */
+    transform:translateX(-50%) translateY(20px);
+    width:600px;
+    z-index:999;
+
+}
+
+.logoTResTResTRes{
+
+    position:absolute;
+    left:50%;
+    bottom:250px; /* ajuste esse valor */
+    transform:translateX(-50%) translateY(20px);
+    width:400px;
+    z-index:999;
+
+}
+
+.logoTResTResTRes img{
+
+    display:block;
+    width:100%;
+    height:auto;
+
+}
+
+
+.logo img{
+
+    display:block;
+    width:100%;
+    height:auto;
+
+}
+
+
+
+
+
+/* =======================================
+INTRO OVERLAY
+======================================= */
+
+.intro-overlay{
+
+    position:absolute;
+    inset:0;
+
+    z-index:999;
+
+    pointer-events:none;
+
+    overflow:hidden;
+
+}
+
+.black{
+
+    position:absolute;
+
+    inset:0;
+
+    background:#000;
+
+}
+
+/* Luz */
+
+.light{
+
+    position:absolute;
+
+    width:1600px;
+    height:1600px;
+
+    border-radius:50%;
+
+    left:-600px;
+    top:-600px;
+
+    background:
+
+    radial-gradient(circle,
+    rgba(255,240,220,.9) 0%,
+    rgba(255,230,210,.45) 28%,
+    transparent 70%);
+
+    filter:blur(80px);
+
+    opacity:0;
+
+}
+
+/* Névoa */
+
+.fog{
+
+    position:absolute;
+
+    inset:-20%;
+
+    background:
+
+    radial-gradient(circle at center,
+    rgba(255,255,255,.12),
+    transparent 70%);
+
+    filter:blur(120px);
+
+    opacity:0;
+
+    transform:scale(1.4);
+
+}
+
+/* ===========================
+INTRO
+=========================== */
+
+.intro{
+
+    position:absolute;
+    inset:0;
+
+    z-index:999;
+
+    pointer-events:none;
+
+}
+
+/* Preto */
+
+.black{
+
+    position:absolute;
+    inset:0;
+
+    background:#000;
+
+}
+
+/* Luz do Sol */
+
+.sun-flash{
+
+    position:absolute;
+
+    width:1800px;
+    height:1800px;
+
+    left:-700px;
+    top:-700px;
+
+    border-radius:50%;
+
+    background:radial-gradient(circle,
+
+        rgba(255,255,255,1) 0%,
+
+        rgba(255,245,220,.95) 12%,
+
+        rgba(255,230,180,.75) 22%,
+
+        rgba(255,210,160,.35) 40%,
+
+        transparent 70%
+
+    );
+
+    filter:blur(120px);
+
+    opacity:0;
+
+    transform:scale(.7);
+
+}
+
+/* Vinheta */
+
+.vignette{
+
+    position:absolute;
+    inset:0;
+
+    background:radial-gradient(circle,
+
+    transparent 45%,
+
+    rgba(0,0,0,.18) 100%
+
+    );
+
+    opacity:0;
+
+}
+/* Camdadas para animar*/
+
+.layer-pedestal{
+
+    position:absolute;
+    width:27vw;
+    left:50%;
+    bottom:7vh;
+    transform:translateX(-50%);
+    z-index:30;
+    pointer-events:none;
+
+}
+
+.layer-montanha-esquerda{
+
+    position:absolute;
+    width:57vw;
+    left:-3vw;
+    bottom:23vh;
+    z-index:2;
+    pointer-events:none;
+    user-select:none;
+    will-change: transform;
+
+
+}
+
+
+.layer-montanha-direita{
+
+    position: absolute;
+    width: 60vw;
+    left: 43.5vw;
+    bottom: 24.4vh;
+    z-index: 2;
+    pointer-events: none;
+    user-select: none;
+    will-change: transform;
+
+
+}
+
+
+/* ======================================
+   NÉVOA CINEMATOGRÁFICA
+====================================== */
+
+.fog{
+
+    position:absolute;
+
+    inset:0;
+
+    pointer-events:none;
+
+}
+
+
+/* Névoa distante */
+
+.fog-back{
+
+    z-index:4;
+
+    background:
+
+    radial-gradient(
+        ellipse at center bottom,
+        rgba(220,230,220,.35),
+        transparent 65%
+    );
+
+    filter:blur(70px);
+
+    opacity:.8;
+
+    animation:fogBackMove 25s infinite alternate ease-in-out;
+
+}
+
+
+/* Névoa próxima da câmera */
+
+.fog-front{
+
+    z-index:35;
+
+    background:
+
+    linear-gradient(
+        110deg,
+        transparent 20%,
+        rgba(255,255,255,.14),
+        transparent 75%
+    );
+
+    filter:blur(45px);
+
+    opacity:.9;
+
+    animation:fogFrontMove 18s infinite alternate ease-in-out;
+
+}
+
+
+
+/* Movimento da névoa distante */
+
+@keyframes fogBackMove{
+
+    from{
+
+        transform:translateX(-40px) scale(1);
+
+    }
+
+    to{
+
+        transform:translateX(40px) scale(1.08);
+
+    }
+
+}
+
+
+
+/* Movimento da névoa próxima */
+
+@keyframes fogFrontMove{
+
+    from{
+
+        transform:translateX(-80px);
+
+    }
+
+    to{
+
+        transform:translateX(80px);
+
+    }
+
+}
+
+
+
+/* ======================================
+   LUZ VOLUMÉTRICA
+====================================== */
+
+.light-ray{
+
+    position:absolute;
+
+    width:150%;
+
+    height:100%;
+
+    left:-25%;
+
+    top:-25%;
+
+
+    background:
+
+    linear-gradient(
+        120deg,
+        transparent 35%,
+        rgba(255,220,170,.22) 50%,
+        transparent 65%
+    );
+
+
+    filter:blur(80px);
+
+
+    opacity:.8;
+
+
+    z-index:20;
+
+
+    pointer-events:none;
+
+
+    animation:lightMove 16s infinite alternate ease-in-out;
+
+}
+
+
+
+/* Movimento lento da luz */
+
+@keyframes lightMove{
+
+    from{
+
+        transform:translateX(-100px);
+
+        opacity:.5;
+
+    }
+
+
+    to{
+
+        transform:translateX(100px);
+
+        opacity:1;
+
+    }
+
+}
+
+.camera{
+
+    position:absolute;
+    inset:0;
+
+    transform-origin:center;
+
+}
+
+/* ======================================
+   CAMERA CINEMATOGRÁFICA
+====================================== */
+
+
+.camera{
+
+    position:absolute;
+
+    inset:0;
+
+    transform-origin:center center;
+
+    will-change:transform;
+
+}
+
+.wind-layer{
+
+    position:absolute;
+
+    inset:0;
+
+    pointer-events:none;
+
+    z-index:25;
+
+    background:
+
+    radial-gradient(
+        ellipse at 30% 70%,
+        rgba(255,255,255,.08),
+        transparent 50%
+    );
+
+    filter:blur(40px);
+
+    animation:windMove 12s infinite alternate ease-in-out;
+
+}
+
+
+@keyframes windMove{
+
+    from{
+
+        transform:translateX(-30px);
+
+        opacity:.3;
+
+    }
+
+    to{
+
+        transform:translateX(30px);
+
+        opacity:.7;
+
+    }
+
+}
+
+.particles{
+
+    position:absolute;
+
+    inset:0;
+
+    z-index:60;
+
+    pointer-events:none;
+
+    opacity:.55;
+
+    background-image:
+
+    radial-gradient(circle, rgba(255,255,255,.8) 1.5px, transparent 3px),
+    radial-gradient(circle, rgba(255,220,170,.6) 2px, transparent 4px),
+    radial-gradient(circle, rgba(255,255,255,.5) 1px, transparent 3px);
+
+
+    background-size:
+
+    150px 150px,
+    230px 230px,
+    320px 320px;
+
+
+    animation:particlesMove 28s linear infinite;
+
+}
+
+
+@keyframes particlesMove{
+
+    from{
+
+        background-position:
+        0 0,
+        60px 100px,
+        120px 50px;
+
+    }
+
+    to{
+
+        background-position:
+        0 -300px,
+        60px -220px,
+        120px -400px;
+
+    }
+
+}
+
+.light-rays{
+
+    position:absolute;
+
+    inset:-30%;
+
+    z-index:10;
+
+    pointer-events:none;
+
+
+    background:
+
+    linear-gradient(
+        120deg,
+        transparent 35%,
+        rgba(255,220,170,.18) 45%,
+        rgba(255,240,210,.08) 50%,
+        transparent 60%
+    );
+
+
+    filter:blur(35px);
+
+
+    transform:rotate(-10deg);
+
+
+    animation:lightSweep 18s infinite alternate ease-in-out;
+
+}
+
+
+
+@keyframes lightSweep{
+
+
+    from{
+
+        transform:
+        translateX(-120px)
+        rotate(-10deg);
+
+        opacity:.3;
+
+    }
+
+
+    to{
+
+        transform:
+        translateX(120px)
+        rotate(-10deg);
+
+        opacity:.8;
+
+    }
+
+
+}

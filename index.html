@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>Matue</title>
+
+</head>
+
+
+<body>
+
+
+<section class="hero">
+
+
+    <!-- =========================
+         INTRO VIDEO
+    ========================== -->
+
+    <video
+        class="intro-video"
+        id="introVideo"
+        autoplay
+        muted
+        playsinline>
+
+        <source src="IMGS/cenario mdt 5.mp4" type="video/mp4">
+    
+
+    </video>
+
+
+
+    <!-- =========================
+         CÂMERA DO DIORAMA
+    ========================== -->
+
+    <div class="camera">
+
+
+        <!-- Fundo -->
+
+        <div class="background"></div>
+        <div class="light-rays"></div>
+
+
+        <!-- Montanhas -->
+
+        <img 
+        class="layer-montanha-esquerda"
+        src="IMGS/Assests de imagens separadas/Asset monstanha lado esquerdo.webp"
+        alt="Montanha esquerda">
+
+
+        <img 
+        class="layer-montanha-direita"
+        src="IMGS/Assests de imagens separadas/Asset montanha lado direito.webp"
+        alt="Montanha direita">
+
+
+        <!-- Botão pra trocar de cena -->
+         
+        <a href="333.html">
+        <button class="change-scene"> ➤</button>
+        </a>
+
+
+        <!-- Pedestal -->
+
+        <img 
+        class="layer-pedestal"
+        src="IMGS/Assests de imagens separadas/Asset Pilar.webp"
+        alt="Pedestal">
+
+
+    </div>
+
+
+
+
+
+    <!-- =========================
+         ATMOSFERA
+    ========================== -->
+
+
+    <div class="fog fog-back"></div>
+
+    <div class="light-ray"></div>
+
+    <div class="fog fog-front"></div>
+
+
+
+
+
+    <!-- =========================
+         LOGO / CENA
+    ========================== -->
+
+
+    <div class="cena hidden">
+
+
+        <div class="logo">
+
+
+            <img 
+            src="IMGS/logo mdt 3 (1).png"
+            alt="Logo Matuê">
+
+
+        </div>
+
+
+    </div>
+
+
+
+
+
+    <!-- =========================
+         INTRO CINEMATOGRÁFICA
+    ========================== -->
+
+
+    <div class="intro">
+
+
+        <div class="black"></div>
+
+
+        <div class="sun-flash"></div>
+
+
+        <div class="vignette"></div>
+
+
+    </div>
+
+<div class="wind-layer"></div>
+
+<div class="particles"></div>
+</section>
+
+
+
+
+<!-- =========================
+     SCRIPTS
+========================== -->
+
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html>
